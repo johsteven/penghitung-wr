@@ -1,0 +1,15 @@
+.btn {
+    transition: .225s;
+    padding: .475rem 3rem;
+    &-primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        &:hover,
+        &:focus {
+            background-color: darken($primary-color, 10);
+        }
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+}

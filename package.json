@@ -1,0 +1,16 @@
+{
+    "name": "penghitung-wr",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch assets/scss/main.scss assets/css/main.css --style compressed"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.34.1"
+    }
+}
