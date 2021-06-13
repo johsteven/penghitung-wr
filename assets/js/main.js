@@ -11,12 +11,13 @@ function res() {
 }
 
 function validation() {
-    const resultNum = rumus(parseInt(tMatch.value), parseInt(tWr.value), parseInt(wrReq.value));
+    const resultNum = rumus(parseFloat(tMatch.value), parseFloat(tWr.value), parseFloat(wrReq.value));
+    const loseNum = rumusLose(parseFloat(tMatch.value), parseFloat(tWr.value), parseFloat(wrReq.value));
     let text = "";
     if (tMatch.value == "" || tWr.value == "" || wrReq.value == "") {
         text = `Field harus diisi bro.`;
         display(text);
-    } else if (parseInt(tMatch.value) < 0 || parseInt(tWr.value) < 0 || parseInt(wrReq.value) < 0) {
+    } else if (parseFloat(tMatch.value) < 0 || parseFloat(tWr.value) < 0 || parseFloat(wrReq.value) < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
         display(text);
     } else if (tWr.value == "100" && wrReq.value == "100") {
@@ -28,8 +29,8 @@ function validation() {
     } else if (resultNum >= 10000) {
         text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>10.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
         display(text);
-    } else if (parseInt(tWr.value) > parseInt(wrReq.value)) {
-        text = `Kamu memerlukan sekitar <b>${-resultNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
+    } else if (parseFloat(tWr.value) > parseFloat(wrReq.value)) {
+        text = `Kamu memerlukan sekitar <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
         display(text);
     } else {
         text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
@@ -48,6 +49,12 @@ function rumus(tMatch, tWr, wrReq) {
     let wrResult = 100 / sisaWr;
     let seratusPersen = tLose * wrResult;
     let final = seratusPersen - tMatch;
+    return Math.round(final);
+}
+
+function rumusLose(tMatch, tWr, wrReq) {
+    let persen = tWr - wrReq;
+    let final = tMatch * (persen / 100);
     return Math.round(final);
 }
 
