@@ -32,6 +32,12 @@ function validation() {
     } else if (parseFloat(tWr.value) > parseFloat(wrReq.value)) {
         text = `Kamu memerlukan sekitar <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
         display(text);
+    } else if (parseFloat(tMatch.value) == 0 && parseFloat(tWr.value) == 0 && parseFloat(wrReq.value) == 100) {
+        text = `Kamu memerlukan sekitar <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
+        display(text);
+    } else if (parseFloat(tMatch.value) == 0 && parseFloat(wrReq.value) == 100) {
+        text = `Gak bisa euy hehe`;
+        display(text);
     } else {
         text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
         display(text);
