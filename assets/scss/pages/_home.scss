@@ -10,6 +10,10 @@
     animation: animation-msg 1s alternate;
 }
 
+.welcomeMsg p {
+    font-size: 11px;
+}
+
 @keyframes animation-msg {
     0% {
         opacity: 0;
@@ -23,6 +27,9 @@
     .welcomeMsg {
         background-color: transparent !important;
         border-bottom: 1px solid gray;
-        color: $text-color !important
+        color: $text-color !important;
+        & p {
+            font-size: 12px;
+        }
     }
 }
