@@ -5,3 +5,24 @@
 .mlImg {
     width: 140px;
 }
+
+.animation {
+    animation: animation-msg 1s alternate;
+}
+
+@keyframes animation-msg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .welcomeMsg {
+        background-color: transparent !important;
+        border-bottom: 1px solid gray;
+        color: $text-color !important
+    }
+}

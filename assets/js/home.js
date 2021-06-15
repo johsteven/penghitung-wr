@@ -1,7 +1,4 @@
 // Variables
-const tMatch = document.querySelector("#tMatch");
-const tWr = document.querySelector("#tWr");
-const wrReq = document.querySelector("#wrReq");
 const hasil = document.querySelector("#hasil");
 const resultText = document.querySelector("#resultText");
 
@@ -11,35 +8,40 @@ function res() {
 }
 
 function validation() {
-    const resultNum = rumus(parseFloat(tMatch.value), parseFloat(tWr.value), parseFloat(wrReq.value));
-    const loseNum = rumusLose(parseFloat(tMatch.value), parseFloat(tWr.value), parseFloat(wrReq.value));
+    const tMatch = parseFloat(document.querySelector("#tMatch").value);
+    const tWr = parseFloat(document.querySelector("#tWr").value);
+    const wrReq = parseFloat(document.querySelector("#wrReq").value);
+
+    const resultNum = rumus(tMatch, tWr, wrReq);
+    const loseNum = rumusLose(tMatch, tWr, wrReq);
+
     let text = "";
-    if (tMatch.value == "" || tWr.value == "" || wrReq.value == "") {
+    if (isNaN(tMatch) || isNaN(tWr) || isNaN(wrReq)) {
         text = `Field harus diisi bro.`;
         display(text);
-    } else if (parseFloat(tMatch.value) < 0 || parseFloat(tWr.value) < 0 || parseFloat(wrReq.value) < 0) {
+    } else if (tMatch < 0 || tWr < 0 || wrReq < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
         display(text);
-    } else if (tWr.value == "100" && wrReq.value == "100") {
-        text = `Kamu memerlukan sekitar <b>0</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
+    } else if (tWr == 100 && wrReq == 100) {
+        text = `Kamu memerlukan sekitar <b>0</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
-    } else if (wrReq.value > 100 || tWr.value > 100) {
+    } else if (wrReq > 100 || tWr > 100) {
         text = `WR tidak boleh lebih dari 100%`;
         display(text);
+    } else if (tWr > wrReq) {
+        text = `Kamu memerlukan sekitar <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        display(text);
+    } else if (tMatch == 0 && tWr == 0 && wrReq == 100) {
+        text = `Kamu memerlukan sekitar <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        display(text);
+    } else if (wrReq == 100) {
+        text = `Gak bisa bro, jangan aneh-aneh.`;
+        display(text);
     } else if (resultNum >= 10000) {
-        text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>10.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
-        display(text);
-    } else if (parseFloat(tWr.value) > parseFloat(wrReq.value)) {
-        text = `Kamu memerlukan sekitar <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
-        display(text);
-    } else if (parseFloat(tMatch.value) == 0 && parseFloat(tWr.value) == 0 && parseFloat(wrReq.value) == 100) {
-        text = `Kamu memerlukan sekitar <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
-        display(text);
-    } else if (parseFloat(tMatch.value) == 0 && parseFloat(wrReq.value) == 100) {
-        text = `Gak bisa euy hehe`;
+        text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>10.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else {
-        text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
+        text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     }
 }
@@ -65,7 +67,7 @@ function rumusLose(tMatch, tWr, wrReq) {
 }
 
 function updateVisitCount() {
-    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res.value) });
+    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res) });
 }
 
 // Main
@@ -78,6 +80,7 @@ function init() {
 
 function load() {
     updateVisitCount();
+    welcomeMsg();
 }
 
 function eventListener() {

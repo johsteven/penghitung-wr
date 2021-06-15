@@ -1,6 +1,4 @@
 // Variables
-const tMatch = document.querySelector("#tMatch");
-const tWr = document.querySelector("#tWr");
 const hasil = document.querySelector("#hasil");
 const resultText = document.querySelector("#resultText");
 
@@ -10,14 +8,21 @@ function res() {
 }
 
 function validation() {
-    const winNum = win(tMatch.value, tWr.value);
-    const loseNum = lose(tMatch.value, tWr.value);
+    const tMatch = parseFloat(document.querySelector("#tMatch").value);
+    const tWr = parseFloat(document.querySelector("#tWr").value);
+
+    const winNum = win(tMatch, tWr);
+    const loseNum = lose(tMatch, tWr);
+
     let text = "";
-    if (tMatch.value == "" || tWr.value == "") {
+    if (isNaN(tMatch) || isNaN(tWr)) {
         text = `Field harus diisi bro.`;
         display(text);
-    } else if (parseFloat(tMatch.value) < 0 || parseFloat(tWr.value) < 0) {
+    } else if (tMatch < 0 || tWr < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
+        display(text);
+    } else if (tWr > 100) {
+        text = `WR tidak boleh lebih dari 100%`;
         display(text);
     } else {
         text = `Total win: <b>${winNum}</b> match <br> Total lose: <b>${loseNum}</b> match <br>`;
@@ -38,7 +43,7 @@ function lose(tMatch, tWr) {
 }
 
 function updateVisitCount() {
-    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res.value) });
+    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res) });
 }
 
 // Main
@@ -51,6 +56,7 @@ function init() {
 
 function load() {
     updateVisitCount();
+    welcomeMsg();
 }
 
 function eventListener() {
