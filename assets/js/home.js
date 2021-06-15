@@ -37,8 +37,8 @@ function validation() {
     } else if (wrReq == 100) {
         text = `Gak bisa bro, jangan aneh-aneh.`;
         display(text);
-    } else if (resultNum >= 10000) {
-        text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>10.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+    } else if (resultNum >= 100000) {
+        text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else {
         text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
