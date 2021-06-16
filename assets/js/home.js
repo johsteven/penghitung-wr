@@ -66,9 +66,9 @@ function rumusLose(tMatch, tWr, wrReq) {
     return Math.round(final);
 }
 
-function updateVisitCount() {
-    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res) });
-}
+// function updateVisitCount() {
+//     fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res) });
+// }
 
 // Main
 window.addEventListener("load", init);
