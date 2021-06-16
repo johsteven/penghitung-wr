@@ -16,7 +16,8 @@
 }
 
 .welcomeMsg a {
-    color: $primary-color;
+    color: #fff;
+    text-decoration: underline !important;
     font-weight: 600 !important;
 }
 
@@ -37,6 +38,9 @@
         & p,
         & a {
             font-size: 12px;
+        }
+        & a {
+            color: $text-color !important;
         }
     }
 }
