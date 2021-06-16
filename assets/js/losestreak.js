@@ -10,25 +10,29 @@ function res() {
 function validation() {
     const tMatch = parseFloat(document.querySelector("#tMatch").value);
     const tWr = parseFloat(document.querySelector("#tWr").value);
+    const lsReq = parseFloat(document.querySelector("#lsReq").value);
 
-    const winNum = win(tMatch, tWr);
-    const loseNum = lose(tMatch, tWr);
-
+    const totalNum = total(tMatch, tWr, lsReq);
+    const minLoseNum = minLose(tMatch, tWr, lsReq);
     let text = "";
-    if (isNaN(tMatch) || isNaN(tWr)) {
+
+    if (isNaN(tMatch) || isNaN(tWr) || isNaN(lsReq)) {
         text = `Field harus diisi bro.`;
         display(text);
-    } else if (tMatch < 0 || tWr < 0) {
+    } else if (lsReq % 1 != 0 || tMatch % 1 != 0) {
+        text = `Field harus bilangan bulat`;
+        display(text);
+    } else if (tMatch < 0 || tWr < 0 || lsReq < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
         display(text);
-    } else if (tMatch % 1 != 0) {
-        text = `Field harus bilangan bulat`;
+    } else if (totalNum < 0) {
+        text = `Minimal anda harus losestreak <b>${minLoseNum}</b> kali`;
         display(text);
     } else if (tWr > 100) {
         text = `WR tidak boleh lebih dari 100%`;
         display(text);
     } else {
-        text = `Total win: <b>${winNum}</b> match <br> Total lose: <b>${loseNum}</b> match <br>`;
+        text = `Jika anda losestreak sebanyak <b>${lsReq}</b> kali, maka winrate anda menjadi <b>${totalNum}%</b>`;
         display(text);
     }
 }
@@ -37,12 +41,13 @@ function display(text) {
     return resultText.innerHTML = text;
 }
 
-function win(tMatch, tWr) {
-    return Math.round(tMatch * (tWr / 100));
+function total(tMatch, tWr, lsReq) {
+    const win = Math.floor(tMatch * (tWr / 100) - lsReq) / tMatch * 100;
+    return win.toFixed(1);
 }
 
-function lose(tMatch, tWr) {
-    return Math.round(tMatch - (tMatch * (tWr / 100)));
+function minLose(tMatch, tWr) {
+    return Math.ceil(tMatch * tWr / 100)
 }
 
 function updateVisitCount() {

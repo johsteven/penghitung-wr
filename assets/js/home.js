@@ -22,6 +22,9 @@ function validation() {
     } else if (tMatch < 0 || tWr < 0 || wrReq < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
         display(text);
+    } else if (tMatch % 1 != 0) {
+        text = `Field harus bilangan bulat`;
+        display(text);
     } else if (tWr == 100 && wrReq == 100) {
         text = `Kamu memerlukan sekitar <b>0</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
@@ -38,7 +41,7 @@ function validation() {
         text = `Gak bisa bro, jangan aneh-aneh.`;
         display(text);
     } else if (resultNum >= 100000) {
-        text = `<b>WTF DAMAGE!!!</b> <br> Kamu memerlukan lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `<b>LU GAK AKAN BISA!</b> <br> Kamu memerlukan lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else {
         text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
