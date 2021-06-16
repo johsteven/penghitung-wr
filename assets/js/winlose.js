@@ -55,7 +55,7 @@ function init() {
 }
 
 function load() {
-    updateVisitCount();
+    // updateVisitCount();
     welcomeMsg();
 }
 
