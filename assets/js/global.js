@@ -2,9 +2,9 @@ function welcomeMsg() {
     const welcomeMsgEl = document.querySelector("#welcomeMsg");
     let array = 0;
 
-    const rendi = `<a href="https://api.whatsapp.com/send?phone=6285867904766" target="_blank">kesini</a>`;
+    const rendi = `<a href="https://api.whatsapp.com/send?phone=6285867904766" target="_blank">Rendy Shop</a>`;
 
-    const msg1 = `<p class="animation mb-0 text-truncate">Yang mau top up diamond ML bisa ${rendi} ya</p>`;
+    const msg1 = `<p class="animation mb-0 text-truncate">Top up diamond ML bisa di ${rendi} ya</p>`;
     const msg2 = `<p class="animation mb-0 text-truncate">Buat yang mau promosi fb, tiktok, ig pc WA ya</p>`;
     const msg3 = `<p class="animation mb-0 text-truncate">Jangan lupa follow sosmed gua dibawah ya</p>`;
     const msg4 = `<p class="animation mb-0 text-truncate">Bagi yang mau donasi ke saya, pc WA ya</p>`;
