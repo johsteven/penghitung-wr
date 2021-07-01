@@ -4,7 +4,7 @@ function welcomeMsg() {
 
     const takapedia = `<a href="https://msha.ke/takapedia/" target="_blank">takapedia</a>`;
     const takapediaIG = `<a href="https://www.instagram.com/taka_pedia/" target="_blank">taka_pedia</a>`;
-    const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6282140039648" target="_blank">takapedia</a>`;
+    const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6287843920288" target="_blank">takapedia</a>`;
     const linkTiktokGua = `<a href="https://vt.tiktok.com/ZSJQ5XuUu/" target="_blank">tiktok</a>`
 
     const msg1 = `<p class="animation mb-0 text-truncate">JOKI, TOP UP & GIFT SKIN ML di ${takapedia} ya</p>`;
