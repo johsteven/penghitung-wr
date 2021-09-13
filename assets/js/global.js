@@ -12,7 +12,7 @@ function welcomeMsg() {
     const msg2 = `<p class="animation mb-0 text-truncate">IG: ${takapediaIG} / WA: ${takapediaWA}</p>`;
     const msg3 = `<p class="animation mb-0 text-truncate">Takapedia dijamin amanah dan terpercaya</p>`;
     const msg4 = `<p class="animation mb-0 text-truncate">${linkWeb}`;
-    const msg5 = `<p class="animation mb-0 text-truncate">Kok kamu epause banh?</p>`;
+    const msg5 = `<p class="animation mb-0 text-truncate">Hehey not bad...</p>`;
 
     let arrayEl = [msg1, msg2, msg3, msg4, msg5];
     let arrayMax = 5;
