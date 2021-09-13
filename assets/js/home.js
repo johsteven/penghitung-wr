@@ -2,11 +2,6 @@
 const hasil = document.querySelector("#hasil");
 const resultText = document.querySelector("#resultText");
 
-// Functions
-function res() {
-    validation();
-}
-
 function validation() {
     const tMatch = parseFloat(document.querySelector("#tMatch").value);
     const tWr = parseFloat(document.querySelector("#tWr").value);
@@ -83,6 +78,7 @@ function init() {
 
 function load() {
     updateVisitCount();
+    checkLS();
     welcomeMsg();
 }
 
