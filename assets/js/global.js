@@ -5,13 +5,12 @@ function welcomeMsg() {
     const takapedia = `<a href="https://msha.ke/takapedia/" target="_blank">takapedia</a>`;
     const takapediaIG = `<a href="https://www.instagram.com/taka_pedia/" target="_blank">taka_pedia</a>`;
     const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6287843920288" target="_blank">takapedia</a>`;
-    const linkDirect = `<a href="https://www.effectivecpmgate.com/swqh6tcn3k?key=163b8eee7c2fbbbdae754cb90a81d9f7" target="_blank">hadir</a>`;
-    const linkWeb = `Cobain web baru gw -> <a href="https://gudkuesyen.com" target="_blank">gudkuesyen.com</a>`
+    const linkDirect = `<a href="https://www.effectivecpmgate.com/swqh6tcn3k?key=163b8eee7c2fbbbdae754cb90a81d9f7" target="_blank">bermain</a>`;
 
     const msg1 = `<p class="animation mb-0 text-truncate">JOKI, TOP UP & GIFT SKIN ML di ${takapedia} ya</p>`;
     const msg2 = `<p class="animation mb-0 text-truncate">IG: ${takapediaIG} / WA: ${takapediaWA}</p>`;
     const msg3 = `<p class="animation mb-0 text-truncate">Takapedia dijamin amanah dan terpercaya</p>`;
-    const msg4 = `<p class="animation mb-0 text-truncate">${linkWeb}`;
+    const msg4 = `<p class="animation mb-0 text-truncate">Tips ${linkDirect} mobile legend agar tidak jadi beban tim`;
     const msg5 = `<p class="animation mb-0 text-truncate">Hehey not bad...</p>`;
 
     let arrayEl = [msg1, msg2, msg3, msg4, msg5];
