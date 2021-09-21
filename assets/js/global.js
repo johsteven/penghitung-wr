@@ -5,14 +5,14 @@ function checkLS() {
 }
 
 function res() {
-    let sum = parseInt(localStorage.getItem('cookies'))
+    // let sum = parseInt(localStorage.getItem('cookies'))
 
-    if (sum == 0) {
-        window.open('https://www.effectivecpmgate.com/swqh6tcn3k?key=163b8eee7c2fbbbdae754cb90a81d9f7', '_blank');
-    } else {
-        validation();
-    }
-    localStorage.setItem('cookies', 1);
+    // if(sum == 0) {
+    //  window.open('https://www.effectivecpmgate.com/swqh6tcn3k?key=163b8eee7c2fbbbdae754cb90a81d9f7', '_blank');
+    // } else {
+    validation();
+    // }
+    //  localStorage.setItem('cookies', 1);
 
 }
 
