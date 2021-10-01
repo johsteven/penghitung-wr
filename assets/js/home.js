@@ -21,25 +21,25 @@ function validation() {
         text = `Field harus bilangan bulat`;
         display(text);
     } else if (tWr == 100 && wrReq == 100) {
-        text = `Kamu memerlukan sekitar <b>0</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `Kamu perlu <b>0</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else if (wrReq > 100 || tWr > 100) {
         text = `WR tidak boleh lebih dari 100%`;
         display(text);
     } else if (tWr > wrReq) {
-        text = `Kamu memerlukan sekitar <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `Kamu perlu <b>${loseNum}</b> lose tanpa win untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else if (tMatch == 0 && tWr == 0 && wrReq == 100) {
-        text = `Kamu memerlukan sekitar <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `Kamu perlu <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else if (wrReq == 100) {
         text = `Gak bisa bro, jangan aneh-aneh.`;
         display(text);
     } else if (resultNum >= 100000) {
-        text = `<b>LU GAK AKAN BISA!</b> <br> Kamu memerlukan lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `<b>LU GAK AKAN BISA!</b> <br> Kamu perlu lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else {
-        text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `Kamu perlu <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     }
 }

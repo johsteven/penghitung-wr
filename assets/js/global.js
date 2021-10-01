@@ -20,7 +20,7 @@ function welcomeMsg() {
     const welcomeMsgEl = document.querySelector("#welcomeMsg");
     let array = 0;
 
-    const takapedia = `<a href="https://msha.ke/takapedia/" target="_blank">takapedia</a>`;
+    const takapedia = `<a href="https://takapedia.com/" target="_blank">takapedia</a>`;
     const takapediaIG = `<a href="https://www.instagram.com/taka_pedia/" target="_blank">taka_pedia</a>`;
     const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6287843920288" target="_blank">takapedia</a>`;
 

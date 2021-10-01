@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apakah kamu penasaran, berapa match yang harus kamu selesaikan untuk mencapai WR sekian?">
+    <meta name="description" content="Apakah kamu penasaran, berapa match yang harus kamu menangkan untuk mencapai target winrate kamu?">
     <meta name="keywords" content="cara menghitung wr, situs penghitung wr, mobile legends, hitung wr, website penghitung wr, penghitung wr">
-    <meta property="og:description" content="Apakah kamu penasaran, berapa match yang harus kamu selesaikan untuk mencapai WR sekian?" />
+    <meta property="og:description" content="Apakah kamu penasaran, berapa match yang harus kamu menangkan untuk mencapai target winrate kamu?" />
 
     <meta name="google-site-verification" content="Byo--K5Z3I8yDp7aTJTQW1z9GRrNlgHxNSKG2UBqt6U" />
 
@@ -27,29 +27,36 @@
             </div>
             <div class="col-lg-6 col-md-9 col-sm-9">
                 <div class="text-center mb-3 d-flex flex-column align-items-center">
-                    <img src="assets/images/MobileLegends.png" class="mlImg mb-1" alt="MobileLegends">
-                    <small class="d-inline-block">Created by : Steven Johannes</small>
+                    <a href="https://takapedia.com/" target="_blank">
+                        <img class="logo-img" src="https://milkshake-production-user-images.imgix.net/f6f69399-5fbd-4109-86e3-3fcd502b84e0?auto=format&amp;w=828">
+                    </a>
                 </div>
-                <form class="mb-3">
-                    <div class="mb-3">
-                        <label class="mb-1" for="idMatch">Total match Anda</label>
-                        <input type="number" placeholder="Cth: 259" autofocus autocomplete="off" id="tMatch" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="mb-1" for="tWr">Total WR Anda</label>
-                        <input type="number" placeholder="Cth: 76.4" step="any" autocomplete="off" id="tWr" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="mb-1" for="wrReq">Berapa WR yang anda inginkan?</label>
-                        <input type="number" placeholder="Cth: 80" step="any" autocomplete="off" id="wrReq" class="form-control">
-                    </div>
-                    <button class="btn btn-primary d-block w-100" type="button" id="hasil">Hasil</button>
-                </form>
-                <span id="resultText" class="text-center d-block">
+
+                <div class="card mb-3">
+
+                    <form class="">
+                        <div class="mb-3">
+                            <label class="mb-1" for="idMatch">Total match Anda</label>
+                            <input type="number" placeholder="Cth: 259" autofocus autocomplete="off" id="tMatch" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="tWr">Total WR Anda</label>
+                            <input type="number" placeholder="Cth: 76.4" step="any" autocomplete="off" id="tWr" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-1" for="wrReq">Berapa WR yang anda inginkan?</label>
+                            <input type="number" placeholder="Cth: 80" step="any" autocomplete="off" id="wrReq" class="form-control">
+                        </div>
+                        <button class="btn btn-primary d-block w-100 mt-4" type="button" id="hasil">Hasil</button>
+                    </form>
+                </div>
+
+                <span id="resultText" class="text-center d-block font-nunito">
                 </span>
+
                 <hr>
-                <a href="winlose.html" class="text-center d-block text-primary mb-2">Ingin tahu total win atau lose anda?</a>
-                <a href="losestreak.html" class="text-center d-block text-primary mb-2">Hitung WR dengan lose streak</a>
+                <a href="winlose.html" class="text-center d-block mb-2 text-warning">Cek total win atau lose</a>
+                <a href="losestreak.html" class="text-center d-block mb-2 text-warning">Hitung WR dengan lose streak</a>
 
                 <!-- <div class="mx-auto mt-5 d-flex justify-content-center">
                     <script type="text/javascript">
@@ -107,7 +114,7 @@
                   </svg>
                     </a>
                     <a class="mx-4" href="https://www.tiktok.com/@johsteven_" target="_blank">
-                        <svg height="17" viewBox="-32 0 512 512" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m432.734375 112.464844c-53.742187 0-97.464844-43.722656-97.464844-97.464844 0-8.285156-6.714843-15-15-15h-80.335937c-8.28125 0-15 6.714844-15 15v329.367188c0 31.59375-25.707032 57.296874-57.300782 57.296874s-57.296874-25.703124-57.296874-57.296874c0-31.597657 25.703124-57.300782 57.296874-57.300782 8.285157 0 15-6.714844 15-15v-80.335937c0-8.28125-6.714843-15-15-15-92.433593 0-167.632812 75.203125-167.632812 167.636719 0 92.433593 75.199219 167.632812 167.632812 167.632812 92.433594 0 167.636719-75.199219 167.636719-167.632812v-145.792969c29.851563 15.917969 63.074219 24.226562 97.464844 24.226562 8.285156 0 15-6.714843 15-15v-80.335937c0-8.28125-6.714844-15-15-15zm0 0"/></svg>
+                        <svg height="17" viewBox="-32 0 512 512" width="17" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="m432.734375 112.464844c-53.742187 0-97.464844-43.722656-97.464844-97.464844 0-8.285156-6.714843-15-15-15h-80.335937c-8.28125 0-15 6.714844-15 15v329.367188c0 31.59375-25.707032 57.296874-57.300782 57.296874s-57.296874-25.703124-57.296874-57.296874c0-31.597657 25.703124-57.300782 57.296874-57.300782 8.285157 0 15-6.714844 15-15v-80.335937c0-8.28125-6.714843-15-15-15-92.433593 0-167.632812 75.203125-167.632812 167.636719 0 92.433593 75.199219 167.632812 167.632812 167.632812 92.433594 0 167.636719-75.199219 167.636719-167.632812v-145.792969c29.851563 15.917969 63.074219 24.226562 97.464844 24.226562 8.285156 0 15-6.714843 15-15v-80.335937c0-8.28125-6.714844-15-15-15zm0 0"/></svg>
                     </a>
                     <a class="mx-4" href="https://github.com/johsteven" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">

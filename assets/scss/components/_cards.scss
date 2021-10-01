@@ -1,0 +1,14 @@
+.card {
+    background-color: #272730 !important;
+    padding: 25px;
+    padding-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+    .card {
+        padding: 20px;
+        padding-bottom: 25px;
+    }
+}
