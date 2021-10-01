@@ -41,10 +41,6 @@ function lose(tMatch, tWr) {
     return Math.round(tMatch - (tMatch * (tWr / 100)));
 }
 
-function updateVisitCount() {
-    fetch("https://api.countapi.xyz/update/johsteven/ccac8049-f0da-408a-b6d7-8826b199afd0/?amount=1").then(res => res.json()).then(res => { console.log(res) });
-}
-
 // Main
 window.addEventListener("load", init);
 
@@ -54,9 +50,8 @@ function init() {
 }
 
 function load() {
-    updateVisitCount();
     checkLS();
-    
+
     welcomeMsg();
 }
 
