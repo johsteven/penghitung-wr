@@ -33,10 +33,10 @@ function validation() {
         text = `Kamu perlu <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else if (wrReq == 100) {
-        text = `Gak bisa bro, jangan aneh-aneh.`;
+        text = `yo ndak bisa, yang bisa cuman Djanu.`;
         display(text);
     } else if (resultNum >= 100000) {
-        text = `<b>LU GAK AKAN BISA!</b> <br> Kamu perlu lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
+        text = `Kamu perlu lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else {
         text = `Kamu perlu <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;

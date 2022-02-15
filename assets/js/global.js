@@ -22,24 +22,24 @@ function welcomeMsg() {
 
     const takapedia = `<a href="https://takapedia.com/" target="_blank">takapedia</a>`;
     const takapediaIG = `<a href="https://www.instagram.com/taka_pedia/" target="_blank">taka_pedia</a>`;
-    const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6287843920288" target="_blank">takapedia</a>`;
+    const takapediaWA = `<a href="https://api.whatsapp.com/send?phone=6287843920288" target="_blank">6287843920288</a>`;
 
-    const msg1 = `<p class="animation mb-0 text-truncate">JOKI, TOP UP & GIFT SKIN ML di ${takapedia} ya</p>`;
-    const msg2 = `<p class="animation mb-0 text-truncate">IG: ${takapediaIG} / WA: ${takapediaWA}</p>`;
-    const msg3 = `<p class="animation mb-0 text-truncate">Takapedia dijamin amanah dan terpercaya</p>`;
-    const msg4 = `<p class="animation mb-0 text-truncate">Tetap jaga kesehatan..`;
-    const msg5 = `<p class="animation mb-0 text-truncate">Hehey not bad...</p>`;
-
-    let arrayEl = [msg1, msg2, msg3, msg4, msg5];
-    let arrayMax = 5;
+    let arrayEl = [
+        `<p class="animation mb-0 text-truncate">Follow ig takapedia untuk ingfo flashsale</p>`,
+        `<p class="animation mb-0 text-truncate">IG: ${takapediaIG} / WA: ${takapediaWA}</p>`,
+        `<p class="animation mb-0 text-truncate">Gas langsung joki di ${takapedia} banh 😅☝️</p>`,
+        `<p class="animation mb-0 text-truncate">MPL S9 kalian dukung siapa ges? kalo gw sih RRQ`,
+        `<p class="animation mb-0 text-truncate">mabar banh bantu gw glory</p>`,
+        `<p class="animation mb-0 text-truncate">follow ml gw ya 965629002 nick Stee.</p>`
+    ];
     setInterval(() => {
         welcomeMsgEl.innerHTML = arrayEl[array];
 
         array++;
-        if (array >= arrayMax) {
+        if (array >= arrayEl.length) {
             array = 0;
         }
-    }, 4000);
+    }, 5000);
 }
 
 window.dataLayer = window.dataLayer || [];
