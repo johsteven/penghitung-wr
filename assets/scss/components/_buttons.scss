@@ -1,6 +1,7 @@
 .btn {
     transition: .225s;
     padding: .475rem 3rem;
+    border-radius: 0px;
     &-primary {
         background-color: $primary-color;
         border-color: $primary-color !important;

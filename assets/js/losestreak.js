@@ -40,7 +40,8 @@ function display(text) {
 }
 
 function total(tMatch, tWr, lsReq) {
-    const win = Math.floor(tMatch * (tWr / 100) - lsReq) / tMatch * 100;
+    let totalWin = (tMatch * tWr) / 100;
+    let win = totalWin / (tMatch + lsReq) * 100;
     return win.toFixed(1);
 }
 

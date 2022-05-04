@@ -33,7 +33,7 @@ function validation() {
         text = `Kamu perlu <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
         display(text);
     } else if (wrReq == 100) {
-        text = `yo ndak bisa, yang bisa cuman Djanu.`;
+        text = `yo ndak bisa, yang bisa cuman Monton`;
         display(text);
     } else if (resultNum >= 100000) {
         text = `Kamu perlu lebih dari <b>100.000</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq}%</b>`;
@@ -59,12 +59,10 @@ function rumus(tMatch, tWr, wrReq) {
 }
 
 function rumusLose(tMatch, tWr, wrReq) {
-    let persen = tWr - wrReq;
-    let final = tMatch * (persen / 100);
-    return Math.round(final);
+    let totalWin = (tMatch * tWr) / 100;
+    let win = (totalWin / (wrReq / 100)) - tMatch;
+    return Math.round(win);
 }
-
-
 
 // Main
 window.addEventListener("load", init);

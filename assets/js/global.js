@@ -28,9 +28,6 @@ function welcomeMsg() {
         `<p class="animation mb-0 text-truncate">Follow ig takapedia untuk ingfo flashsale</p>`,
         `<p class="animation mb-0 text-truncate">IG: ${takapediaIG} / WA: ${takapediaWA}</p>`,
         `<p class="animation mb-0 text-truncate">Gas langsung joki di ${takapedia} banh 😅☝️</p>`,
-        `<p class="animation mb-0 text-truncate">MPL S9 kalian dukung siapa ges? kalo gw sih RRQ`,
-        `<p class="animation mb-0 text-truncate">mabar banh bantu gw glory</p>`,
-        `<p class="animation mb-0 text-truncate">follow ml gw ya 965629002 nick Stee.</p>`
     ];
     setInterval(() => {
         welcomeMsgEl.innerHTML = arrayEl[array];
